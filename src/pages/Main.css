@@ -1,0 +1,16 @@
+.MainImage {
+	top: 0px;
+
+	background-image: url('https://wallpaperaccess.com/full/2992412.jpg');
+
+	filter: blur(10px);
+
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+
+	transform: translateY(-75px);
+	margin-bottom: -75px;
+
+	width: 100%;
+	height: calc(100vh);
+}

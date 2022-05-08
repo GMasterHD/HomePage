@@ -1,0 +1,68 @@
+div.NavSeperator {
+	transform: translateX(-5px) rotate(10deg);
+	border-right: 2px solid green;
+	height: 32px;
+	align-self: center;
+	padding: 0px;
+	margin-left: 5px;
+}
+
+.NavBar {
+	z-index: 20;
+}
+
+.NavItem {
+	background-color: aqua;
+	width: 150px;
+	height: 40px;
+
+	text-decoration: none;
+	
+	display: flex;
+	margin: 0px 5px 0px 0px;
+}
+
+.NavItem:hover {
+	background-color: red;
+}
+
+
+.SubNavContainer > ul {
+	color: white;
+	text-align: center;
+	font-variant: small-caps;
+
+	list-style: none;
+	padding: 0px;
+	top: 18px;
+	position: absolute;
+	width: 150px;
+
+	box-shadow: 2px 2px 20px 10px green;
+	background-color: aqua;
+	border-radius: 10px;
+
+	visibility: hidden;
+
+	transition: top 0.2s;
+	transition-timing-function: ease-out 1s;
+}
+.SubNavContainer > ul > li {
+	margin: 5px 5px 5px 5px;
+	padding: 5px;
+}
+
+.SubNavItemItem:hover {
+	background-color: blue;
+	border-radius: 10px;
+	cursor: pointer;
+}
+
+.SubNavContainer {
+	display: flex;
+}
+
+.SubNavContainer:hover ul, div.SubNavContainer>ul:hover {
+	top: 24px;
+	visibility: visible;
+}

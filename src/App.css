@@ -1,0 +1,27 @@
+html {
+	background-color: #1a1a1a;
+	scroll-behavior: smooth;
+
+	overflow-x: hidden;
+	overflow-y: scroll;
+
+	user-select: none;
+}
+
+/* Scroll Bar */
+::-webkit-scrollbar{
+	width: 0.7vw;
+	height: 0.7vw;
+}
+::-webkit-scrollbar-thumb{
+	background: linear-gradient(13deg, #D102C0 14%,#7700AD 64%);
+	border-radius: 15px;
+}
+::-webkit-scrollbar-thumb:hover{
+	background: linear-gradient(13deg, #F9D4FF 14%,#C7CEFF 64%);
+}
+::-webkit-scrollbar-track{
+	background: #202020;
+	border-radius: 15px;
+	box-shadow: inset 7px 10px 12px 0px #202020;
+}

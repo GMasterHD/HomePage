@@ -5,7 +5,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 /* ---> Website Elements <--- */
 import Header from './elements/Header'
-import Footer from './elements/Header'
+import Footer from './elements/Footer'
 
 /* ---> Pages <--- */
 import Main from './pages/Main'

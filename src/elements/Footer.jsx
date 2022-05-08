@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 function Footer(props) {
 	return (
-		<div>Header</div>
+		<div>Footer</div>
 	)
 }
 

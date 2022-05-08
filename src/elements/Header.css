@@ -1,0 +1,27 @@
+.Header {
+	z-index: 20;
+}
+
+div.BrandLogo {
+	display: flex;
+	z-index: 20;
+}
+img.BrandLogo {
+	display: flex;
+	z-index: 20;
+}
+
+div.NavBar {
+	display: flex;
+	justify-content: center;
+	width: calc(100% - 200px);
+	height: 100%;
+	background-color: rebeccapurple;
+	border-bottom: 2px solid red;
+	z-index: 20;
+}
+img.RightLogo {
+	align-items: flex-end;
+	margin-left: auto;
+	z-index: 20;
+}

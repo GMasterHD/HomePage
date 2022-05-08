@@ -1,3 +1,8 @@
+:root {
+	--leftImage: url('https://via.placeholder.com/200x75')
+	--rightImage: url('https://via.placeholder.com/200x76')
+}
+
 .Header {
 	z-index: 20;
 }
@@ -24,4 +29,10 @@ img.RightLogo {
 	align-items: flex-end;
 	margin-left: auto;
 	z-index: 20;
+}
+
+@media screen and (max-width: 820px)  {
+	img.BrandLogo {
+		width: 0px;
+	}
 }

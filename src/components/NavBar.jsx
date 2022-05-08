@@ -38,12 +38,36 @@ function NavBar({ hrefs }) {
 	})
 	return (
 		<>
-			<div class='NavBar'>
-				{tabs}
-				<div className='NavSeperator' />
+			<div className='NavBar'>
+			<div className="NavBarCompactReplace">
+				</div>
+				<div className="NavBarHide">
+					{tabs}
+					<div className='NavSeperator' />
+				</div>
+			</div>
+			<div className="CompactNavBarButton" onClick={onClick} id='fixed'>	
+			</div>
+			<div className='NavBarCompact NavBarCompactHandle' id=''>
+				<ul>
+					<li><a className='CompactNavItemItem' href="">Nav Link A</a></li>
+					<li><a className='CompactNavItemItem' href="">Nav Link B</a></li>
+					<li><a className='CompactNavItemItem' href="">Sub Nav Link C</a></li>
+					<li><a className='CompactNavItemItem' href="">Sub Nav Link D</a></li>
+					<li><a className='CompactNavItemItem' href="">Nav Link E</a></li>
+				</ul>
 			</div>
 		</>
 	)
+}
+
+function onClick() {
+	const e = document.getElementsByClassName('NavBarCompactHandle')[0]
+	if(e.id == '') {
+		e.id = 'hidden'
+	} else {
+		e.id = ''
+	}
 }
 
 NavBar.propTypes = {}

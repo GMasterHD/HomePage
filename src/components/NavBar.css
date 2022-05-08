@@ -9,10 +9,23 @@ div.NavSeperator {
 
 .NavBar {
 	z-index: 20;
+	display: flex;
+
+	visibility: visible;
+}
+.NavBarHide {
+	z-index: 20;
+	display: flex;
+}
+
+@media screen and (max-width: 820px) {
+	.NavBarHide {
+		visibility: hidden;
+	}
 }
 
 .NavItem {
-	background-color: aqua;
+	background-color: coral;
 	width: 150px;
 	height: 40px;
 
@@ -21,20 +34,43 @@ div.NavSeperator {
 	display: flex;
 	margin: 0px 5px 0px 0px;
 }
+a.NavItem {
+	padding: 10px 2vw 0px 2vw;
+	width: auto;
+}
 
 .NavItem:hover {
 	background-color: red;
 }
 
+.SubNavContainer > ul > li {
+	margin: 5px 5px 5px 5px;
+}
+
+.SubNavItemItem > a {
+	display: block;
+	background-color: red;
+	min-width: 100%;
+	padding: 8px 0px 8px 0px;
+	border-radius: 10px;
+}
+.SubNavItemItem > a:hover {
+	background-color: blue;
+	border-radius: 10px;
+	cursor: pointer;
+}
+
+.SubNavContainer {
+	display: flex;
+}
 
 .SubNavContainer > ul {
-	color: white;
 	text-align: center;
 	font-variant: small-caps;
 
 	list-style: none;
 	padding: 0px;
-	top: 18px;
+	top: 25px;
 	position: absolute;
 	width: 150px;
 
@@ -47,22 +83,103 @@ div.NavSeperator {
 	transition: top 0.2s;
 	transition-timing-function: ease-out 1s;
 }
-.SubNavContainer > ul > li {
-	margin: 5px 5px 5px 5px;
-	padding: 5px;
+.SubNavContainer:hover ul, div.SubNavContainer>ul:hover {
+	top: 34px;
+	visibility: visible;
 }
 
-.SubNavItemItem:hover {
+
+/* --- Compact Nav Bar --- */
+.NavBarCompact {
+	transform: translateX(0px);
+
+	padding: 80px 5px 0px 5px;
+
+	visibility: hidden;
+
+	display: flex;
+	position: fixed;
+	width: 250px;
+	height: 100%;
+
+	top: 0px;
+	left: 0px;
+
+	z-index: 20;
+	background-color: red;
+
+	box-shadow: 2px 2px 20px 10px green;
+
+	transition: transform 0.2s, box-shadow 0.2s;
+	transition-timing-function: ease-in-out;
+}
+.NavBarCompact > ul {
+	padding: 0px;
+	list-style: none;
+
+	width: 250px;
+}
+.NavBarCompact > ul > li {
+	display: flex;
+	padding-top: 5px;
+	width: 250px;
+}
+.CompactNavItemItem {
+	background-color: aqua;
+	font-variant: small-caps;
+	
+	border-radius: 5px;
+
+	padding: 10px;
+
+	width: 250px;
+}
+
+.NavBarCompactReplace {
+	visibility: hidden;
+}
+
+.CompactNavBarButton {
+	top: 0px;
+	left: 0px;
+
+	position: absolute;
+
+	align-self: center;
+	float: left;
+	width: 40px;
+	height: 40px;
+
+	margin: 5px 0px 5px 5px;
+
 	background-color: blue;
-	border-radius: 10px;
+
+	z-index: 50;
+}
+.CompactNavBarButton:hover {
 	cursor: pointer;
 }
 
-.SubNavContainer {
-	display: flex;
+.CompactNavBarButton {
+	visibility: hidden;
 }
 
-.SubNavContainer:hover ul, div.SubNavContainer>ul:hover {
-	top: 24px;
-	visibility: visible;
+@media screen and (max-width: 820px) {
+	.NavBarCompact {
+		visibility: visible;
+	}
+	.NavBarCompactReplace {
+		visibility: visible;
+	}
+	.CompactNavBarButton {
+		visibility: visible;
+	}
+}
+
+.NavBarCompact#hidden {
+	transform: translateX(-260px);
+	box-shadow: none;
+}
+.CompactNavBarButton#fixed {
+	position: fixed;
 }
